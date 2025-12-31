@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NightHaven</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #000;
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+        }
+
+        /* Container Utama */
+        .hero-section {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* --- BACKGROUND SLIDESHOW --- */
+        .slideshow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0; /* Mulai dari transparan */
+            animation: slideAnim 15s infinite; /* Total waktu siklus 15 detik */
+        }
+
+        /* Foto 1 */
+        .slide:nth-child(1) {
+            background-image: url('assets/foto13.jpg');
+            animation-delay: 0s;
+        }
+        /* Foto 2 */
+        .slide:nth-child(2) {
+            background-image: url('assets/foto12.jpg');
+            animation-delay: 5s;
+        }
+        /* Foto 3 */
+        .slide:nth-child(3) {
+            background-image: url('assets/foto5.jpg');
+            animation-delay: 10s;
+        }
+
+        /* Animasi Transisi Halus */
+        @keyframes slideAnim {
+            0% { opacity: 0; }
+            10% { opacity: 0.4; } /* Muncul sebagai siluet (opacity rendah) */
+            33% { opacity: 0.4; }
+            43% { opacity: 0; }
+            100% { opacity: 0; }
+        }
+
+        /* Overlay Gelap */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+        }
+
+        /* Konten Logo */
+        .logo-container {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+        }
+
+        .logo-img { 
+            width: 200px;
+            margin-bottom: 15px;
+        }
+
+        h1 { 
+            letter-spacing: 12px; 
+            font-weight: 200; 
+            text-transform: uppercase; 
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        nav {
+            position: absolute;
+            top: 30px;
+            right: 50px;
+            z-index: 10;
+        }
+        nav a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 8px 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero-section">
+        <div class="slideshow">
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+        </div>
+
+        <div class="overlay"></div>
+        
+        <nav>
+            <a href="about.html">ABOUT</a>
+        </nav>
+
+        <a href="gallery.html" class="logo-container" data-aos="zoom-out" data-aos-duration="2000">
+            <img src="assets/nght.png" alt="Logo" class="logo-img">
+            <h1>NightHaven</h1>
+        </a>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init();</script>
+</body>
+</html>

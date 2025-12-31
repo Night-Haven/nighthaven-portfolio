@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom LUTs - NightHaven</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        body { 
+            background-color: #050505; 
+            color: #fff; 
+            font-family: 'Inter', sans-serif; 
+            margin: 0; 
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        /* Navigasi */
+        nav { 
+            position: fixed; 
+            top: 0; 
+            width: 100%; 
+            display: flex; 
+            justify-content: flex-start; 
+            padding: 30px 50px; 
+            box-sizing: border-box; 
+            z-index: 100; 
+        }
+
+        nav a { 
+            color: #fff; 
+            text-decoration: none; 
+            font-size: 0.7rem; 
+            letter-spacing: 2px; 
+            border: 1px solid #333; 
+            padding: 10px 20px; 
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        /* Konten Utama Tengah */
+        .main-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .coming-soon-box {
+            border: 1px solid #1a1a1a;
+            padding: 60px 40px;
+            background: #0a0a0a;
+            max-width: 500px;
+        }
+
+        h1 { 
+            font-weight: 200; 
+            letter-spacing: 15px; 
+            text-transform: uppercase; 
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        p { 
+            color: #666; 
+            font-size: 0.9rem; 
+            letter-spacing: 2px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .status-tag {
+            display: inline-block;
+            background: #1a1a1a;
+            color: #ffcc00; /* Warna aksen gold */
+            padding: 5px 15px;
+            font-size: 0.6rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="gallery.html">GALLERY</a>
+        <a href="about.html">ABOUT</a> 
+    </nav>
+
+    <div class="main-content">
+        <div class="coming-soon-box" data-aos="zoom-in" data-aos-duration="1200">
+            <span class="status-tag">Status: Development</span>
+            <h1>Coming Soon</h1>
+            <p>I am currently refining my custom color presets to give your photos the perfect cinematic touch. Stay tuned.</p>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init();</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - NightHaven</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        body { background-color: #050505; color: #fff; font-family: 'Inter', sans-serif; margin: 0; }
+        nav { position: fixed; top: 0; width: 100%; display: flex; justify-content: flex-end; padding: 30px; box-sizing: border-box; z-index: 100; }
+        nav a { color: #fff; text-decoration: none; font-size: 0.7rem; letter-spacing: 2px; border: 1px solid #333; padding: 10px 20px; margin-left: 10px; transition: 0.3s; }
+        nav a:hover { background: #fff; color: #000; }
+
+        .container { 
+            max-width: 900px; 
+            margin: 0 auto; 
+            padding: 150px 20px; 
+            display: flex; 
+            align-items: center; 
+            gap: 50px; 
+        }
+
+        .profile-img {
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+            border: 1px solid #222;
+        }
+
+        .text-content { flex: 1; }
+        h1 { font-weight: 200; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 20px; }
+        p { color: #888; line-height: 1.8; font-size: 0.95rem; margin-bottom: 20px; }
+        
+        .social-links a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-size: 0.8rem;
+            margin-right: 15px;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            .container { flex-direction: column; text-align: center; padding: 100px 20px; }
+            .profile-img { width: 200px; height: 200px; border-radius: 50%; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="gallery.html">GALLERY</a>
+    </nav>
+
+    <div class="container">
+        <img src="assets/me.jpeg" class="profile-img" data-aos="fade-right"> <div class="text-content" data-aos="fade-left">
+            <h1>About Me</h1>
+            <p>
+                Halo, saya sosok di balik <strong>NightHaven</strong>. Bagi banyak orang, Sains Data dan Seni mungkin terlihat berseberangan. Namun bagi saya, keduanya adalah tentang satu hal:<strong> Mencari Kebenaran.</strong>
+            </p>
+            <p>
+                Di ruang akademis, saya mencari pola dalam tumpukan data. Di jalanan dan galeri, saya mencari pola dalam cahaya dan ekspresi manusia. Kamera adalah alat saya untuk membekukan waktu, sementara kepemimpinan di <strong>HIMASADA</strong> mengajarkan saya arti kebersamaan yang menghidupkan waktu tersebut.
+            </p>
+            <p>
+                Capturing the essence through my lens. Ini adalah kumpulan cara pandang saya terhadap dunia—di mana logika data bertemu dengan keindahan rasa.
+            </p>
+
+            <div class="social-links">
+                <a href="https://www.instagram.com/arya.putrajagaddatri?igsh=M3Ryenp1dDhjcTBp">INSTAGRAM</a>
+                <a href="mailto:aryaputra.jagaddatri29@gmail.com">EMAIL</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1000 });</script>
+</body>
+</html>
